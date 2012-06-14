@@ -1,0 +1,21 @@
+%h1 Listing Brains
+
+%ul.toolbar
+	%li= link_to 'New Brain', new_brain_path
+
+%table
+	%thead
+		%tr
+			%th owner_key
+			%th zombie_key
+			%th hideout
+	%tbody
+		- @brains.each do |b|
+			%tr
+				%td= b.owner_key
+				%td= b.zombie_key
+				%td= link_to b.hideout.name, b.hideout
+				%td
+					%ul.actions
+						%li= link_to 'Show', b
+				

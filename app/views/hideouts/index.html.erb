@@ -1,0 +1,23 @@
+<h1>Listing hideouts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hideouts.each do |hideout| %>
+  <tr>
+    <td><%= hideout.name %></td>
+    <td><%= link_to 'Show', hideout %></td>
+    <td><%= link_to 'Edit', edit_hideout_path(hideout) %></td>
+    <td><%= link_to 'Destroy', hideout, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hideout', new_hideout_path %>
