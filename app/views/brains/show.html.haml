@@ -1,0 +1,9 @@
+%h1 A Brain
+
+%dl.fields
+	%dt owner
+	%dd= @brain.owner
+	%dt zombie
+	%dd= @brain.zombie
+	%dt hideout
+	%dd= link_to @brain.hideout.name, @brain.hideout
